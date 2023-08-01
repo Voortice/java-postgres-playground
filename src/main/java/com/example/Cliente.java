@@ -1,6 +1,7 @@
 package com.example;
 
 public class Cliente {
+    private String nome; 
     private double renda;
     private char sexo;
     private int anoNascimento;
@@ -35,6 +36,7 @@ public class Cliente {
             System.out.println("A renda precisa ser positiva");
         }
     }
+    
     public void setSexo(char sexo) {
         if (sexo == 'M' || sexo == 'F'){
             this.sexo = sexo;
@@ -42,7 +44,16 @@ public class Cliente {
             System.out.println("Insira um sexo valido");
         }
     }
+
     public void setAnoNascimento(int anoNascimento) {
         this.anoNascimento = anoNascimento;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 }
