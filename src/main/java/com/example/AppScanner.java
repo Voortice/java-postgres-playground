@@ -1,6 +1,8 @@
 package com.example;
 import java.util.Scanner;
 
+import com.example.model.Cliente;
+
 public class AppScanner {
     public static void main(String[] args) {
         Cliente cliente = new Cliente();

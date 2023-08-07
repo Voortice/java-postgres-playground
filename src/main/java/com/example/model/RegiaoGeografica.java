@@ -1,12 +1,14 @@
-package com.example;
+package com.example.model;
 
-public class Marca {
-    private Long id;
+public class RegiaoGeografica {
+    private long id;
     private String nome;
-    public Long getId() {
+
+
+    public long getId() {
         return id;
     }
-    public void setId(Long id) {
+    public void setId(long id) {
         this.id = id;
     }
     public String getNome() {
@@ -14,6 +16,5 @@ public class Marca {
     }
     public void setNome(String nome) {
         this.nome = nome;
-    }
-    
+    } 
 }
