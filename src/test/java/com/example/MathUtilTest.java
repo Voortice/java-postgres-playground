@@ -1,5 +1,5 @@
 package com.example;
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
@@ -66,4 +66,26 @@ public class MathUtilTest {
 
         assertEquals(esperado, obtido);
     }
+
+    @Test
+    void testMdc3Valores(){
+        int a = 12, b = 6, c = 4;
+        int esperado = 2;
+        int obtido = MathUtil.mdc(a, b, c);
+
+        assertEquals(esperado, obtido);
+    }
+
+    @Test
+    void testMdcNenhumValor(){
+        var e = assertThrows(ArrayIndexOutOfBoundsException.class, MathUtil::mdc);
+        System.out.println(e.getMessage());
+    }
+
+    @Test
+    void testMdcNulo(){
+        var e = assertThrows(NullPointerException.class, () -> mdc(null));
+        System.out.println(e.getMessage());
+    }
+
 }
