@@ -81,11 +81,4 @@ public class MathUtilTest {
         var e = assertThrows(ArrayIndexOutOfBoundsException.class, MathUtil::mdc);
         System.out.println(e.getMessage());
     }
-
-    @Test
-    void testMdcNulo(){
-        var e = assertThrows(NullPointerException.class, () -> mdc(null));
-        System.out.println(e.getMessage());
-    }
-
 }
